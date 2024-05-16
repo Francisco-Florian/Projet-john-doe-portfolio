@@ -735,6 +735,7 @@ footer {
     animation-name: fadeInScaleUp;
     animation-duration: 1s;
     animation-delay: 2.6s;
+    z-index: -1;
 }
 
 /* Définition des keyframes */
