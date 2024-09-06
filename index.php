@@ -11,32 +11,33 @@
 
 <body>
 
-    <header class="container_1440">
+    <header id="header" class="container_1440">
         <div id="headerTitle">
-            <a href="/">
+            <a href="index.php">
                 <h2>John Doe</h2>
             </a>
             <p>Développeur Web et Web Mobile</p>
         </div>
         <nav id="headerNav">
+            <a id="closeBtn" href="#" class="close">&times;</a>
             <ul>
                 <li>
-                    <a class="active" href="#">Acceuil</a>
+                    <a class="active" href="index.php">Acceuil</a>
                 </li>
                 <li>
                     <a href="#">Qui suis-je ?</a>
                 </li>
                 <li>
-                    <a href="maFormation.html">Ma formation</a>
+                    <a href="maFormation.php">Ma formation</a>
                 </li>
                 <li>
                     <a href="#">Mes compétences</a>
                 </li>
                 <li>
-                    <a href="mesProjet.html">Mes projets</a>
+                    <a href="mesProjet.php">Mes projets</a>
                 </li>
                 <li>
-                    <a class="contact" href="#modalHeaderOverlay">Contactez-moi</a>
+                    <a class="contact" id="openModalBtn" href="#modalHeaderOverlay">Contactez-moi</a>
                     <div id="modalHeaderOverlay">
                         <div id="modalHeader">
                             <a href="#" class="close-modal">&times;</a>
@@ -74,7 +75,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias</p>
                 <p>temporibus corrupti blanditiis aliquid, quod a expedita eligendi soluta libero voluptate sit, maiores
                     consequatur minus perspiciatis perferendis porro? Consectetur, laborum quo!</p>
-                <a href="#modalSectionOverlay">Contactez-moi</a>
+                <a href="#modalSectionOverlay" href="section1MainArticle">Contactez-moi</a>
                 <div id="modalSectionOverlay">
                     <div id="modalSection">
                         <a href="#" class="close-modal">&times;</a>
@@ -313,10 +314,10 @@
         </section>
     </main>
 
-    <footer>
-        <p>Mon super site web !</p>
-    </footer>
-
+    <?php
+        include_once 'footer.php';
+    ?>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

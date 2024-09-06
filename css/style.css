@@ -84,14 +84,17 @@ body {
 
 .burgerMenu {
     display: none;
+    cursor: pointer;
 }
 
-header {
+.close{
+    display: none;
+    cursor: pointer;
+}
+
+#header {
     display: flex;
     justify-content: space-between;
-}
-
-header div {
     margin-top: 10px;
 }
 
@@ -106,8 +109,13 @@ nav ul {
     position: relative;
 }
 
+nav ul a{
+    color: var(--orange);
+}
+
 .contact {
     background-color: var(--orange);
+    color: var(--beige);
     padding: 5px 10px;
 }
 
@@ -134,16 +142,10 @@ nav ul {
     display: none;
 }
 
-#modalHeaderOverlay:target {
-    display: flex;
-}
-
 .close-modal {
     position: absolute;
     top: -8px;
     right: 10px;
-    background: none;
-    border: none;
     font-size: 40px;
     cursor: pointer;
     text-decoration: none;
@@ -231,7 +233,7 @@ footer {
 }
 
 #modalSectionOverlay:target {
-    display: inline-block;
+    display: block;
 }
 
 #modalSection h2 {
@@ -490,6 +492,7 @@ footer {
         display: block;
         color: var(--white);
         align-self: center;
+        cursor: pointer;
     }
 
     header nav {
@@ -524,6 +527,37 @@ footer {
 /* responsive mobile */
 
 @media screen and (max-width: 767px){
+
+    /* header */
+
+    header{
+        position: relative;
+    }
+
+    .activeBurger{
+        display: block;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        padding: 15px;
+        background-color: var(--beige);
+        transition: right 0.5s ease-in-out;
+    }
+
+    .activeBurger ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+    }
+    .close{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: var(--red);
+    }
     
     /* section2Main */
 
